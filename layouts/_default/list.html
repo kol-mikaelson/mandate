@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="container" style="padding-top:var(--stack-lg);padding-bottom:var(--stack-lg);">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+  </header>
+  <div class="article-list">
+    {{ range .Paginator.Pages }}
+    <a href="{{ .RelPermalink }}" class="article-list-item">
+      {{ if .Params.image }}
+      <div class="article-list-image"><img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" /></div>
+      {{ else }}
+      <div class="article-list-image" style="background:var(--surface-container);display:flex;align-items:center;justify-content:center;color:var(--outline);">
+        <span class="material-symbols-outlined" style="font-size:48px;">article</span>
+      </div>
+      {{ end }}
+      <div class="article-list-body">
+        <span class="card-tag">{{ .Params.category | default "General" }}</span>
+        <h2 class="card-title" style="font-size:28px;margin-bottom:12px;">{{ .Title }}</h2>
+        <p class="card-excerpt">{{ .Params.excerpt | default (.Summary | truncate 200) }}</p>
+        <div class="card-meta">
+          <span class="author">{{ .Params.author | default "Staff Writer" }}</span>
+          <span>{{ .Date.Format "January 2, 2006" }}</span>
+          <span>{{ .Params.read_time | default "5" }} Min Read</span>
+        </div>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+  {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}

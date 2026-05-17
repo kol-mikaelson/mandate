@@ -1,0 +1,65 @@
+{{ define "main" }}
+<div class="container">
+  <header class="home-header">
+    <div class="date-line">{{ now.Format "Monday, 2 January 2006" }}</div>
+    <h1>The Madras Mandate</h1>
+    <p>Rigorous political analysis and cultural critique from Chennai and Tamil Nadu.</p>
+  </header>
+
+  {{ $articles := where .Site.RegularPages "Type" "articles" }}
+  {{ $featured := first 3 $articles }}
+
+  {{ if ge (len $featured) 1 }}
+  {{ $main := index $featured 0 }}
+  {{ $sides := after 1 $featured }}
+  <div class="featured-grid">
+    <a href="{{ $main.RelPermalink }}" class="article-card featured-main">
+      {{ if $main.Params.image }}<div class="card-image"><img src="{{ $main.Params.image }}" alt="{{ $main.Title }}" loading="lazy" /></div>{{ end }}
+      <div class="card-body">
+        <span class="card-tag">{{ $main.Params.category | default "General" }}</span>
+        <h2 class="card-title">{{ $main.Title }}</h2>
+        <p class="card-excerpt">{{ $main.Params.excerpt | default ($main.Summary | truncate 180) }}</p>
+        <div class="card-meta">
+          <span class="author">{{ $main.Params.author | default "Staff Writer" }}</span>
+          <span>{{ $main.Date.Format "Jan 2, 2006" }}</span>
+          <span>{{ $main.Params.read_time | default "5" }} Min Read</span>
+        </div>
+      </div>
+    </a>
+    {{ range $sides }}
+    <a href="{{ .RelPermalink }}" class="article-card featured-side">
+      {{ if .Params.image }}<div class="card-image"><img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" /></div>{{ end }}
+      <div class="card-body">
+        <span class="card-tag">{{ .Params.category | default "General" }}</span>
+        <h2 class="card-title" style="font-size:20px;">{{ .Title }}</h2>
+        <p class="card-excerpt" style="font-size:15px;">{{ .Params.excerpt | default (.Summary | truncate 120) }}</p>
+        <div class="card-meta">
+          <span class="author">{{ .Params.author | default "Staff Writer" }}</span>
+          <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+        </div>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{ $rest := after 3 $articles }}
+  {{ if $rest }}
+  <div class="section-divider"><h2>Latest</h2></div>
+  <div class="secondary-grid">
+    {{ range first 6 $rest }}
+    <a href="{{ .RelPermalink }}" class="secondary-card">
+      {{ if .Params.image }}<div class="card-image" style="margin-bottom:16px;aspect-ratio:16/9;"><img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" /></div>{{ end }}
+      <span class="card-tag">{{ .Params.category | default "General" }}</span>
+      <h3 class="card-title">{{ .Title }}</h3>
+      <div class="card-meta">
+        <span class="author">{{ .Params.author | default "Staff Writer" }}</span>
+        <span>{{ .Date.Format "Jan 2" }}</span>
+        <span>{{ .Params.read_time | default "5" }} Min</span>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

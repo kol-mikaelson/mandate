@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="container" style="padding-top:var(--stack-lg);padding-bottom:var(--stack-lg);">
+  <header class="page-header"><h1>{{ .Title }}</h1></header>
+  <div class="article-list">
+    {{ range .Pages }}
+    <a href="{{ .RelPermalink }}" class="article-list-item">
+      <div class="article-list-image" style="background:var(--surface-container);display:flex;align-items:center;justify-content:center;color:var(--outline);">
+        <span class="material-symbols-outlined" style="font-size:48px;">article</span>
+      </div>
+      <div class="article-list-body">
+        <span class="card-tag">{{ .Params.category | default "General" }}</span>
+        <h2 class="card-title" style="font-size:28px;margin-bottom:12px;">{{ .Title }}</h2>
+        <p class="card-excerpt">{{ .Params.excerpt | default (.Summary | truncate 200) }}</p>
+        <div class="card-meta">
+          <span class="author">{{ .Params.author | default "Staff Writer" }}</span>
+          <span>{{ .Date.Format "January 2, 2006" }}</span>
+        </div>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

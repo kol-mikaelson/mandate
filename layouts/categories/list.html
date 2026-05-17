@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div class="container" style="padding-top:var(--stack-lg);padding-bottom:var(--stack-lg);">
+  <header class="page-header">
+    <h1>The Mandate: Areas of Focus</h1>
+    <p>A structured index of our critical political and cultural analysis, guiding readers through the foundational issues shaping Chennai and Tamil Nadu.</p>
+  </header>
+  <div class="bento-grid">
+    {{ range .Site.Params.categories }}
+    <article class="{{ .span_class }}">
+      <div class="bento-body">
+        <span class="material-symbols-outlined bento-icon">{{ .icon }}</span>
+        <h2 class="bento-title">{{ .name }}</h2>
+        <p class="bento-desc">{{ .description }}</p>
+      </div>
+      <div class="bento-footer">
+        <a href="{{ .url }}">Explore Section <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span></a>
+        {{ with .article_count }}<span class="bento-count">{{ . }} Articles</span>{{ end }}
+      </div>
+    </article>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
