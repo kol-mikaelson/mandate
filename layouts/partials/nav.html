@@ -1,14 +1,14 @@
 <nav class="site-nav">
   <div class="inner">
-    <a href="{{ "/" | relURL }}" class="brand">The Madras Mandate</a>
+    <a href="{{ .Site.BaseURL }}" class="brand">The Madras Mandate</a>
     <div class="nav-links">
       {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}"{{ if eq $.Section .Identifier }} class="active"{{ end }}>{{ .Name }}</a>
+      <a href="{{ .URL | absURL }}"{{ if eq $.Section .Identifier }} class="active"{{ end }}>{{ .Name }}</a>
       {{ end }}
     </div>
     <div class="nav-actions">
       <button class="search-btn" aria-label="Search"><span class="material-symbols-outlined">search</span></button>
-      <button class="btn-subscribe btn-subscribe-outline">Subscribe</button>
+      <button class="btn-subscribe">Subscribe</button>
       <button class="menu-toggle" aria-label="Menu"><span class="material-symbols-outlined">menu</span></button>
     </div>
   </div>

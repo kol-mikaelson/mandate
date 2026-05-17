@@ -1,21 +1,75 @@
-baseURL = "https://kol-mikaelson.github.io/madras-mandate/"
+baseURL = "https://kol-mikaelson.github.io/mandate/"
 languageCode = "en-us"
 title = "The Madras Mandate"
-theme = "madras"
-paginate = 10
 
 [params]
-  description = "Rigorous political and cultural analysis from Chennai"
-  tagline = "The authoritative voice on Chennai's politics and culture"
+  description = "Rigorous political analysis and cultural critique from Chennai and Tamil Nadu"
+  tagline = "Editorial Rigor. Cultural Rootedness."
 
-[taxonomies]
-  category = "categories"
-  tag = "tags"
+[[menus.main]]
+  name       = "Urban Governance"
+  url        = "/articles/urban-governance/"
+  identifier = "urban-governance"
+  weight     = 1
+
+[[menus.main]]
+  name       = "State Policy"
+  url        = "/articles/state-policy/"
+  identifier = "state-policy"
+  weight     = 2
+
+[[menus.main]]
+  name       = "Cultural Mandate"
+  url        = "/articles/cultural-mandate/"
+  identifier = "cultural-mandate"
+  weight     = 3
+
+[[menus.main]]
+  name       = "Manifesto"
+  url        = "/manifesto/"
+  identifier = "manifesto"
+  weight     = 4
+
+[[params.categories]]
+  name          = "State Policy"
+  description   = "Rigorous analysis of legislative movements, bureaucratic restructuring, and the long-term strategic vision of the state government."
+  icon          = "account_balance"
+  url           = "/articles/state-policy/"
+  span_class    = "bento-card bento-card-wide"
+  article_count = "24"
+
+[[params.categories]]
+  name          = "Urban Governance"
+  description   = "Deep dives into Chennai's civic infrastructure, municipal planning, and the lived experience of city policy."
+  icon          = "location_city"
+  url           = "/articles/urban-governance/"
+  span_class    = "bento-card bento-card-narrow"
+  article_count = "18"
+
+[[params.categories]]
+  name          = "Cultural Mandate"
+  description   = "Criticism and commentary on the arts, music, cinema, and cultural institutions of Tamil Nadu."
+  icon          = "theater_comedy"
+  url           = "/articles/cultural-mandate/"
+  span_class    = "bento-card bento-card-narrow"
+  article_count = "15"
+
+[[params.categories]]
+  name          = "The Archive"
+  description   = "Our complete catalogue of long-form analysis and investigative reporting."
+  icon          = "inventory_2"
+  url           = "/articles/"
+  span_class    = "bento-card bento-card-full"
+  article_count = "57"
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel = 3
+
+[taxonomies]
+  category = "categories"
+  tag      = "tags"
+
+[pagination]
+  pagerSize = 8

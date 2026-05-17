@@ -1,0 +1,20 @@
+{{ define "body-class" }}manifesto-bg{{ end }}
+{{ define "main" }}
+<div class="container">
+  <article class="manifesto-article">
+    <header class="manifesto-header">
+      <h1>The Manifesto</h1>
+      <div class="manifesto-tagline">Editorial Rigor. Cultural Rootedness.</div>
+    </header>
+    <div class="manifesto-body">
+      {{ .Content }}
+    </div>
+    <footer class="manifesto-footer">
+      <div class="manifesto-signature">
+        <p class="manifesto-sig-name">The Editorial Board</p>
+        <p class="manifesto-sig-place">Chennai, Tamil Nadu</p>
+      </div>
+    </footer>
+  </article>
+</div>
+{{ end }}

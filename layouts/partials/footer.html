@@ -6,11 +6,11 @@
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Sections</div>
-      {{ range .Site.Menus.main }}<a href="{{ .URL }}">{{ .Name }}</a>{{ end }}
+      {{ range .Site.Menus.main }}<a href="{{ .URL | absURL }}">{{ .Name }}</a>{{ end }}
     </div>
     <div class="footer-col">
       <div class="footer-col-title">About</div>
-      <a href="/manifesto/">Our Manifesto</a>
+      <a href="{{ "/manifesto/" | absURL }}">Our Manifesto</a>
       <a href="#">Contact</a>
       <a href="#">Subscribe</a>
     </div>

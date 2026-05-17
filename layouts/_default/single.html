@@ -8,8 +8,14 @@
       <h1 class="article-headline">{{ .Title }}</h1>
       <div class="article-byline">
         <span class="byline-author byline-item">{{ .Params.author | default "Staff Writer" }}</span>
-        <span class="byline-item"><span class="material-symbols-outlined">calendar_today</span>{{ .Date.Format "January 2, 2006" }}</span>
-        <span class="byline-item"><span class="material-symbols-outlined">schedule</span>{{ .Params.read_time | default "5" }} Min Read</span>
+        <span class="byline-item">
+          <span class="material-symbols-outlined">calendar_today</span>
+          {{ .Date.Format "January 2, 2006" }}
+        </span>
+        <span class="byline-item">
+          <span class="material-symbols-outlined">schedule</span>
+          {{ .Params.read_time | default "5" }} Min Read
+        </span>
       </div>
       {{ if .Params.image }}
       <div class="article-featured-image">
@@ -20,21 +26,26 @@
       <div class="article-body">{{ .Content }}</div>
       {{ if .Params.tags }}
       <div class="article-tags">
-        {{ range .Params.tags }}<a href="{{ "/" | relURL }}tags/{{ . | lower | urlize }}/" class="tag-chip">{{ . }}</a>{{ end }}
+        {{ range .Params.tags }}
+        <a href="{{ "/tags/" | absURL }}{{ . | lower | urlize }}/" class="tag-chip">{{ . }}</a>
+        {{ end }}
       </div>
       {{ end }}
       <div class="author-bio">
-        <div class="author-avatar" style="display:flex;align-items:center;justify-content:center;color:var(--outline);">
-          <span class="material-symbols-outlined" style="font-size:40px;">person</span>
+        <div class="author-avatar">
+          <span class="material-symbols-outlined" style="font-size:40px;color:var(--outline);">person</span>
         </div>
         <div>
           <div class="author-name">{{ .Params.author | default "Staff Writer" }}</div>
           <p class="author-desc">{{ .Params.author_bio | default "A correspondent at The Madras Mandate." }}</p>
-          <a href="#" class="author-link">View All Articles <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span></a>
+          <a href="#" class="author-link">
+            View All Articles
+            <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
+          </a>
         </div>
       </div>
       {{ with .NextInSection }}
-      <a href="{{ .RelPermalink }}" class="next-article">
+      <a href="{{ .RelPermalink | absURL }}" class="next-article">
         <div class="next-article-header">
           <span>Next in {{ $.Params.category | default "Articles" }}</span>
           <span class="material-symbols-outlined">arrow_forward</span>
@@ -65,12 +76,12 @@
           <div class="sidebar-related-title">Related Perspectives</div>
           <div class="related-list">
             {{ range first 3 $related }}
-            <a href="{{ .RelPermalink }}" class="related-item">
-              <span class="tag-chip" style="font-size:10px;background:none;border:none;padding:0;color:var(--secondary);display:block;margin-bottom:6px;">{{ .Params.category }}</span>
-              <h4 style="font-family:var(--font-serif);font-size:18px;font-weight:600;line-height:1.4;color:var(--primary);margin-bottom:6px;">{{ .Title }}</h4>
-              <span style="font-family:var(--font-sans);font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--outline);">{{ .Date.Format "Jan 2" }} • {{ .Params.read_time | default "5" }} Min Read</span>
+            <a href="{{ .RelPermalink | absURL }}" class="related-item">
+              <span class="related-tag">{{ .Params.category }}</span>
+              <h4 class="related-title">{{ .Title }}</h4>
+              <span class="related-meta">{{ .Date.Format "Jan 2" }} • {{ .Params.read_time | default "5" }} Min Read</span>
             </a>
-            <div style="width:100%;height:1px;background:rgba(0,30,64,0.1);"></div>
+            <div class="related-divider"></div>
             {{ end }}
           </div>
         </div>
