@@ -1,6 +1,6 @@
 baseURL = "https://kol-mikaelson.github.io/mandate/"
 languageCode = "en-us"
-title = "The Madras Mandate"
+title = "The Mandate"
 
 [params]
   description = "Rigorous political analysis and cultural critique from Chennai and Tamil Nadu"

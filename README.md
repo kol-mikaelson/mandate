@@ -1,4 +1,4 @@
-# The Madras Mandate
+# The Mandate
 
 A Hugo-powered static blog for rigorous political analysis and cultural critique from Chennai and Tamil Nadu. Hosted on GitHub Pages with automatic deployment on every push to `main`.
 

@@ -1,4 +1,4 @@
 ---
 title: "All Articles"
-description: "The complete catalogue of analysis and reporting from The Madras Mandate."
+description: "The complete catalogue of analysis and reporting from The Mandate."
 ---

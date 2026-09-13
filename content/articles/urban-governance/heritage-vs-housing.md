@@ -3,7 +3,7 @@ title: "Heritage vs. Housing: The Zoning Wars of Mylapore"
 date: 2024-10-10
 draft: false
 author: "Kavitha Subramaniam"
-author_bio: "Kavitha covers urban policy and heritage for The Madras Mandate. She is a trained architect and urbanist based in Mylapore."
+author_bio: "Kavitha covers urban policy and heritage for The Mandate. She is a trained architect and urbanist based in Mylapore."
 category: "Urban Governance"
 tags: ["Heritage", "Housing", "Zoning", "Mylapore"]
 read_time: "5"

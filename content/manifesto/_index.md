@@ -8,7 +8,7 @@ We publish from Chennai because we believe this city — and this state — dese
 
 Tamil Nadu is not an afterthought in the national conversation. It is a laboratory of governance, a cradle of culture, and a place where the contradictions of modern India play out with particular intensity. Yet its political and civic life remains chronically under-examined by national media, distorted by stereotypes, or reduced to electoral arithmetic.
 
-**The Madras Mandate exists to change this.**
+**The Mandate exists to change this.**
 
 <div class="manifesto-principles">
   <div class="principle-item">
