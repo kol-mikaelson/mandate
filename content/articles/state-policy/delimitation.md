@@ -1,5 +1,5 @@
 ---
-title: "Delimitation"
+title: "An Alternative to Delimitation"
 date: 2026-09-13T20:56:11+05:30
 draft: false
 author: "Purandhar Reddy"
@@ -25,4 +25,9 @@ The proposal that was tabled as of today proposed to tie the increase in seats f
 
 The Government has said that no state would lose a seat in the lok sabha which although is true, is obviously a twisting of the facts(like we know the government to do with other data), anybody that has passed High School Maths can tell you, the gains made by UP/Bihar would dwarf the gains made by states like TN/Kerala which although on paper did not lose any seats would effectivley become an after thought during national elections, as simply winning the Hindi States would nearly be enough to guarantee the single largest party if not the entire Government.
 
+As the discussion on delimitation has dragged on there have been multiple alternate proposals from the opposition and neutral parties alike, some make more sense than the others, but all of them equally difficult to get through the South Block, The CM of telangana suggested that some form of GDP should be taken into account when deciding representation, however this would break a fundamental principle of Indian democracy in violationg Universal Sufferage, causing a vote from a richer state to potentially have more influence simply because it is from a richer state than a poorer state, The former CM of Tamil Nadu had suggested keeping the ratios constant but increasing the seats to 850, although this does not violate any democratic principles, it would be tough to convince the Hindi Belt states which would not be happy with such a proposal, neither would the ruling BJP which has notoriously not been able to consistently form governments in the south(Karnataka being an exception but even then failed to hold on to government for consecutive terms).
+
+The ever in the spotlight MP from kerala Shasi Tharoor also had his own opinion about how increasing the number of seats would affect discussions in the Lok Sabha, pointing out that even today with a strenght of just 543, the house finds it difficult to allocate enough time to all the members who would like to participate in the discussion, he would go on to mention something interesting too, taking the example of the chinese parliment which has the task of representing a similar population, he points out how its just a rubber stamp for any government policies that are drafted and decided before by local or much smaller governmental bodies
+
+> The Government has said that no state would lose a seat in the lok sabha which although is true, is obviously a twisting of the facts(like we know the government to do with other data)
 More content...
