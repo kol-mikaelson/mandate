@@ -14,7 +14,7 @@
   {{ $sides := after 1 $featured }}
   <div class="featured-grid">
     <a href="{{ $main.RelPermalink }}" class="article-card featured-main">
-      {{ if $main.Params.image }}<div class="card-image"><img src="{{ $main.Params.image }}" alt="{{ $main.Title }}" loading="lazy" /></div>{{ end }}
+      {{ if $main.Params.image }}<div class="card-image"><img src="{{ $main.Params.image | relURL }}" alt="{{ $main.Title }}" loading="lazy" /></div>{{ end }}
       <div class="card-body">
         <span class="card-tag">{{ $main.Params.category | default "General" }}</span>
         <h2 class="card-title">{{ $main.Title }}</h2>
@@ -28,7 +28,7 @@
     </a>
     {{ range $sides }}
     <a href="{{ .RelPermalink }}" class="article-card featured-side">
-      {{ if .Params.image }}<div class="card-image"><img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" /></div>{{ end }}
+      {{ if .Params.image }}<div class="card-image"><img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy" /></div>{{ end }}
       <div class="card-body">
         <span class="card-tag">{{ .Params.category | default "General" }}</span>
         <h2 class="card-title" style="font-size:20px;">{{ .Title }}</h2>
@@ -49,7 +49,7 @@
   <div class="secondary-grid">
     {{ range first 6 $rest }}
     <a href="{{ .RelPermalink }}" class="secondary-card">
-      {{ if .Params.image }}<div class="card-image" style="margin-bottom:16px;aspect-ratio:16/9;"><img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" /></div>{{ end }}
+      {{ if .Params.image }}<div class="card-image" style="margin-bottom:16px;aspect-ratio:16/9;"><img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy" /></div>{{ end }}
       <span class="card-tag">{{ .Params.category | default "General" }}</span>
       <h3 class="card-title">{{ .Title }}</h3>
       <div class="card-meta">

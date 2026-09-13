@@ -19,7 +19,7 @@
       </div>
       {{ if .Params.image }}
       <div class="article-featured-image">
-        <img src="{{ .Params.image }}" alt="{{ .Title }}" />
+        <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" />
         {{ if .Params.image_caption }}<div class="image-caption">{{ .Params.image_caption }}</div>{{ end }}
       </div>
       {{ end }}

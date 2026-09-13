@@ -9,7 +9,7 @@
     {{ range .Paginator.Pages }}
     <a href="{{ .RelPermalink }}" class="article-list-item">
       {{ if .Params.image }}
-      <div class="article-list-image"><img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy" /></div>
+      <div class="article-list-image"><img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy" /></div>
       {{ else }}
       <div class="article-list-image" style="background:var(--surface-container);display:flex;align-items:center;justify-content:center;color:var(--outline);">
         <span class="material-symbols-outlined" style="font-size:48px;">article</span>
