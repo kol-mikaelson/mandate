@@ -8,7 +8,7 @@ category: "Indian Politics"
 tags: ["federalism", "governance"]
 read_time: "7"
 excerpt: "Although much has been spoken around the proposed constitutionally mandated delimitation that is set after the first census post 2026, not much has gone in the way of exploring one particular solution that i belive would be politically difficult to get past South Block. "
-image: "/images/Final Delimitation Cover.png"
+image: "/images/final-delimitation-cover.png"
 image_caption: "Optional caption."
 ---
 
