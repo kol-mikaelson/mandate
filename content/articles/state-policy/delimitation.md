@@ -8,7 +8,7 @@ category: "Indian Politics"
 tags: ["federalism", "governance"]
 read_time: "7"
 excerpt: "Although much has been spoken around the proposed constitutionally mandated delimitation that is set after the first census post 2026, not much has gone in the way of exploring one particular solution that i belive would be politically difficult to get past South Block. "
-image: "/images/final-delimitation-cover.png"
+image: "images/final-delimitation-cover.png"
 image_caption: "Optional caption."
 ---
 
@@ -16,6 +16,8 @@ Article content in Markdown.
 
 ## The Issue with the Delimitation Proposal and its history
 The core issue as with delimitation is the same as every other issue facing the federal structure of government in India, there is just too much inequality between the states, to reconcile one national policy for a lot of issues, we have seen this play out in multiple other policies, take for example the Anti-NEET protests in TN, or the discussion regarding central tax distribution to states outside the Hindi belt or even to some extent the imposition of Hindi that has become almost accepted in the nearly 15 year rule of the BJP
+
+The Government thankfully was not formed by a single party(i.e BJP), hence they would need the support of allies in both the Lok Sabha and the Rajya Sabha to get any delimitation proposal through. the TDP which is part of the NDA coalition at the centre has signalled it might be willing to accept the proposal as is, which as you would have read would be absolutely detrimental to the political power and representation of southern states in New Delhi
 
 > A notable pull-quote.
 
